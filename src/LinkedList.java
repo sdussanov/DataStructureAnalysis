@@ -93,6 +93,61 @@ public class LinkedList {
         return size;
     }
 
+    public void reverce() {
+        if (isEmpty()) return;
+
+        var prev = first;
+        var current = first.next;
+
+        while (current != null) {
+            var next = current.next;
+
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        last = first;
+        last.next = null;
+        first = prev;
+    }
+
+    public int getKthFromEnd(int k) {
+        if (isEmpty()) throw new IllegalStateException();
+        if (k > size) throw new IllegalArgumentException();
+
+        var head = first;
+        var tail = first;
+
+        for (int i = 0; i < k - 1; i++) {
+            head = head.next;
+        }
+
+        while (head != last) {
+            head = head.next;
+            tail = tail.next;
+        }
+        return tail.value;
+    }
+
+    public int getKthFromEnd2(int k) {
+        if (isEmpty()) throw new IllegalStateException();
+        if (k > size) throw new IllegalArgumentException();
+
+        var head = first;
+        var tail = first;
+        var count = 0;
+
+        while (head != last) {
+            head = head.next;
+            count++;
+            if (count >= k) {
+                tail = tail.next;
+            }
+        }
+        return tail.value;
+    }
+
     public int[] toArray() {
         int[] array = new int[size];
         var current = first;

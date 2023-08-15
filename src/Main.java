@@ -16,14 +16,10 @@ public class Main {
         list.addLast(10);
         list.addLast(20);
         list.addLast(30);
+        list.addLast(40);
+        list.addLast(50);
 
-        list.removeLast();
+        System.out.println(list.getKthFromEnd(-1));
 
-        System.out.println(list.indexOf(40));
-        System.out.println(list.contains(40));
-
-        int[] array = list.toArray();
-
-        System.out.println(Arrays.toString(array));
     }
 }
