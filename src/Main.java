@@ -1,6 +1,3 @@
-import java.awt.image.AreaAveragingScaleFilter;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -18,6 +15,8 @@ public class Main {
         list.addLast(30);
         list.addLast(40);
         list.addLast(50);
+
+
 
         System.out.println(list.getKthFromEnd(-1));
 
