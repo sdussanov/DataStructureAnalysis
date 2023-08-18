@@ -20,11 +20,18 @@ public class Main {
 //
 //        System.out.println(list.getKthFromEnd(-1));
 
-        String str = "({abcd})";
+//        String str = "({abcd})";
+//
+//        StringBalanced sb = new StringBalanced();
+//
+//        System.out.println(sb.isBalanced(str));
 
-        StringBalanced sb = new StringBalanced();
+        CustomStack stack = new CustomStack();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
 
-        System.out.println(sb.isBalanced(str));
+        System.out.println(stack.toString());
 
     }
 }
