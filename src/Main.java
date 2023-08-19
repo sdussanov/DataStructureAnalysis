@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -31,16 +33,21 @@ public class Main {
 //
 //        System.out.println(stack.toString());
 
-        ArrayQueue queue = new ArrayQueue();
-        queue.deque(10);
-        queue.deque(20);
-        queue.deque(30);
-        queue.enqueue(5);
-        queue.enqueue(9);
+        ArrayQueue queue = new ArrayQueue(5);
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+
+        System.out.println(queue.deque());
         System.out.println(queue.toString());
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
 
-        System.out.println(queue.peek());
 
+        System.out.println(queue.deque());
         System.out.println(queue.toString());
     }
+
+
 }

@@ -1,47 +1,59 @@
 import java.util.Arrays;
 
 public class ArrayQueue {
-    int first;
-    int last;
-    int[] items = new int[5];
+    int[] items;
+    int front;
+    int rear;
+    int count;
 
-    public void enqueue(int item) {
-        if (last >= items.length)
-            throw new IllegalStateException();
-
-        for (int i = last; i > 0; i--) {
-            items[i] = items[i - 1];
-        }
-
-        items[first] = item;
-        last++;
+    public ArrayQueue(int capacity) {
+        items = new int[capacity];
     }
 
-    public void deque(int item) {
-        if (last >= items.length)
+    public void enqueue(int item) {
+        if (count == items.length)
             throw new IllegalStateException();
 
-        items[last++] = item;
+        items[rear] = item;
+        rear = (rear + 1) % items.length;
+        count++;
+    }
+
+    public int deque() {
+        if (rear == 0)
+            throw new IllegalStateException();
+
+        var item = items[front];
+        items[front] = 0;
+        front = (front + 1) % items.length;
+        count--;
+        return item;
+//        var item = items[first];
+//
+//        for (int i = 0; i <= rear; i++) {
+//            items[i] = items[i + 1];
+//        }
+//        rear--;
+//        return item;
     }
 
     public int peek() {
-        if (last == 0)
+        if (rear == 0)
             throw new IllegalStateException();
 
-        return items[--last];
+        return items[--rear];
     }
 
     public boolean isEmpty() {
-        return last == 0;
+        return rear == 0;
     }
 
     public boolean isFull() {
-        return last == items.length;
+        return rear == items.length;
     }
 
     @Override
     public String toString() {
-        var result = Arrays.copyOfRange(items, 0, last);
-        return Arrays.toString(result);
+        return Arrays.toString(items);
     }
 }
