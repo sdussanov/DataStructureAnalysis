@@ -1,5 +1,3 @@
-import java.util.Stack;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -25,13 +23,24 @@ public class Main {
 //        StringBalanced sb = new StringBalanced();
 //
 //        System.out.println(sb.isBalanced(str));
+//
+//        CustomStack stack = new CustomStack();
+//        stack.push(10);
+//        stack.push(20);
+//        stack.push(30);
+//
+//        System.out.println(stack.toString());
 
-        CustomStack stack = new CustomStack();
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
+        ArrayQueue queue = new ArrayQueue();
+        queue.deque(10);
+        queue.deque(20);
+        queue.deque(30);
+        queue.enqueue(5);
+        queue.enqueue(9);
+        System.out.println(queue.toString());
 
-        System.out.println(stack.toString());
+        System.out.println(queue.peek());
 
+        System.out.println(queue.toString());
     }
 }
