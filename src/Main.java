@@ -1,4 +1,5 @@
 import java.util.ArrayDeque;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,21 +34,29 @@ public class Main {
 //
 //        System.out.println(stack.toString());
 
-        ArrayQueue queue = new ArrayQueue(5);
-        queue.enqueue(10);
-        queue.enqueue(20);
-        queue.enqueue(30);
+//        ArrayQueue queue = new ArrayQueue(5);
+//        queue.enqueue(10);
+//        queue.enqueue(20);
+//        queue.enqueue(30);
+//
+//        System.out.println(queue.deque());
+//        System.out.println(queue.toString());
+//        queue.enqueue(10);
+//        queue.enqueue(20);
+//        queue.enqueue(30);
+//
+//
+//        System.out.println(queue.deque());
+//        System.out.println(queue.toString());
+//    }
 
-        System.out.println(queue.deque());
-        System.out.println(queue.toString());
-        queue.enqueue(10);
-        queue.enqueue(20);
-        queue.enqueue(30);
+        Stack<Integer> stack1 = new Stack<>();
+        stack1.add(10);
+        stack1.add(20);
+        stack1.add(30);
+        System.out.println(stack1);
 
+        
 
-        System.out.println(queue.deque());
-        System.out.println(queue.toString());
     }
-
-
 }
