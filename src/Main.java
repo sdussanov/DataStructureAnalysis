@@ -1,4 +1,5 @@
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Stack;
 
 public class Main {
@@ -49,14 +50,14 @@ public class Main {
 //        System.out.println(queue.deque());
 //        System.out.println(queue.toString());
 //    }
+        PriorityQueue queue = new PriorityQueue(5);
+        queue.add(10);
 
-        Stack<Integer> stack1 = new Stack<>();
-        stack1.add(10);
-        stack1.add(20);
-        stack1.add(30);
-        System.out.println(stack1);
-
-        
+        queue.add(40);
+        queue.add(30);
+        queue.add(20);
+        queue.add(20);
+        System.out.println(queue.toString());
 
     }
 }
