@@ -1,6 +1,5 @@
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Stack;
+import java.util.*;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -50,14 +49,18 @@ public class Main {
 //        System.out.println(queue.deque());
 //        System.out.println(queue.toString());
 //    }
-        PriorityQueue queue = new PriorityQueue(5);
-        queue.add(10);
+//        PriorityQueue queue = new PriorityQueue(5);
+//        queue.add(10);
+//
+//        queue.add(40);
+//        queue.add(30);
+//        queue.add(20);
+//        queue.add(20);
+//        System.out.println(queue.toString());
 
-        queue.add(40);
-        queue.add(30);
-        queue.add(20);
-        queue.add(20);
-        System.out.println(queue.toString());
+        Map<Character, Integer> map = new HashMap<>();
+
 
     }
+
 }
