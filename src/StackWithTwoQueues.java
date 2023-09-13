@@ -40,7 +40,7 @@ class StackWithTwoQueues {
 /**
  * Your MyStack object will be instantiated and called as such:
  * MyStack obj = 1new MyStack();
- * obj.push(x);
+ * obj.push(x);123
  * int param_2 = obj.pop();
  * int param_3 = obj.top();
  * boolean param_4 = obj.empty();
