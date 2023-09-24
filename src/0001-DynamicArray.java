@@ -1,8 +1,8 @@
-public class Array {
+class DynamicArray {
     private int count;
     private int[] items;
 
-    public Array(int length) {
+    public DynamicArray(int length) {
         items = new int[length];
         count = 0;
     }
@@ -20,10 +20,10 @@ public class Array {
 
     public void removeAt(int index) {
         if (index < 0 || index >= count) {
-            throw new IllegalArgumentException("out of range");
+            throw new IllegalArgumentException("Out of range!");
         }
         for (int i = index; i < count; i++) {
-                items[i] = items[i + 1];
+            items[i] = items[i + 1];
         }
         count--;
     }

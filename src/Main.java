@@ -1,10 +1,11 @@
-import java.util.*;
 import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
 
-//        Array numbers = new Array(3);
+        /* 0001-DynamicArray */
+
+//        DynamicArray numbers = new DynamicArray(3);
 //        numbers.insert(10);
 //        numbers.insert(20);
 //        numbers.insert(30);
@@ -12,14 +13,17 @@ public class Main {
 //        System.out.println(numbers.indexOf(5));
 //        numbers.print();
 
-//        LinkedList list = new LinkedList();
-//        list.addLast(10);
-//        list.addLast(20);
-//        list.addLast(30);
-//        list.addLast(40);
-//        list.addLast(50);
-//
-//        System.out.println(list.getKthFromEnd(-1));
+
+        /* 00002-LinkedList */
+
+        LinkedList list = new LinkedList();
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        list.addLast(40);
+        list.addLast(50);
+
+        System.out.println(list.getKthFromEnd(2));
 
 //        String str = "({abcd})";
 //
@@ -58,7 +62,7 @@ public class Main {
 //        queue.add(20);
 //        System.out.println(queue.toString());
 
-        Map<Character, Integer> map = new HashMap<>();
+        //Map<Character, Integer> map = new HashMap<>();
 
 
     }
