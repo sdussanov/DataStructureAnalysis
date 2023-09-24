@@ -35,17 +35,12 @@ class StackWithTwoQueues {
     public boolean empty() {
         return queue1.isEmpty();
     }
-}
 
-/**
- * Your MyStack object will be instantiated and called as such:
- * MyStack obj = 1new MyStack();
- * obj.push(x);123123123wwww1231asd1231231111111
- * int param_2 = obj.pop();фыв11
- * int param_3 = obj.top();
- * boolean param_4 = obj.empty();
- * awdawd
- *
- *
- *
- */
+    @Override
+    public String toString() {
+        return "StackWithTwoQueues{" +
+                "queue1=" + queue1 +
+                ", queue2=" + queue2 +
+                '}';
+    }
+}

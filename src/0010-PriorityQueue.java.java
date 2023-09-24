@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class PriorityQueue {
+class PriorityQueue {
     private int[] items;
     private int count;
 
@@ -10,8 +10,7 @@ public class PriorityQueue {
 
     public void add(int item) {
         if (isFull()) {
-            throw new IllegalStateException();
-            //or resize arr
+            throw new IllegalStateException(); //Or resize our array
         }
 
         var i = shiftItemsToInsert(item);
@@ -35,7 +34,7 @@ public class PriorityQueue {
         if (isEmpty())
             throw new IllegalStateException();
 
-        return items[count--];
+        return items[--count];
     }
 
     public boolean isEmpty() {
@@ -48,6 +47,7 @@ public class PriorityQueue {
 
     @Override
     public String toString() {
-        return Arrays.toString(items);
+        var output = Arrays.copyOfRange(items, 0, count);
+        return Arrays.toString(output);
     }
 }

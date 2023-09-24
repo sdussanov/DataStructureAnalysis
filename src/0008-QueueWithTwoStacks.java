@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class QueueWithTwoStacks {
+class QueueWithTwoStacks {
     private Stack<Integer> stack1 = new Stack<>();
     private Stack<Integer> stack2 = new Stack<>();
 
@@ -34,5 +34,13 @@ public class QueueWithTwoStacks {
         if (stack2.isEmpty())
             while (!stack1.isEmpty())
                 stack2.push(stack1.pop());
+    }
+
+    @Override
+    public String toString() {
+        return "QueueWithTwoStacks{" +
+                "stack1=" + stack1 +
+                ", stack2=" + stack2 +
+                '}';
     }
 }

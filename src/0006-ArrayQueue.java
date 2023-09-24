@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ArrayQueue {
+class ArrayQueue {
     int[] items;
     int front;
     int rear;
@@ -28,13 +28,6 @@ public class ArrayQueue {
         front = (front + 1) % items.length;
         count--;
         return item;
-//        var item = items[first];
-//
-//        for (int i = 0; i <= rear; i++) {
-//            items[i] = items[i + 1];
-//        }
-//        rear--;
-//        return item;
     }
 
     public int peek() {

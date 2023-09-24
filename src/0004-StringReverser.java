@@ -1,10 +1,6 @@
 import java.util.Stack;
 
-public class StringReverser {
-    public StringReverser(String input) {
-        System.out.println(this.reverse(input));
-    }
-
+class StringReverser {
     public String reverse(String input) {
         if (input == null)
             throw new IllegalArgumentException();
@@ -22,5 +18,4 @@ public class StringReverser {
         }
         return reversed.toString();
     }
-
 }

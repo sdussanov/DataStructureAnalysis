@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class CustomStack {
+class Stack {
     private int[] items = new int[5];
     int count;
 
@@ -11,7 +11,7 @@ public class CustomStack {
     }
 
     public int pop() {
-        if (count == 0 )
+        if (count == 0)
             throw new IllegalStateException();
         return items[--count];
     }
@@ -21,13 +21,12 @@ public class CustomStack {
     }
 
     public boolean isEmpty() {
-        return count==0;
+        return count == 0;
     }
 
     @Override
     public String toString() {
         var output = Arrays.copyOfRange(items, 0, count);
         return Arrays.toString(output);
-
     }
 }

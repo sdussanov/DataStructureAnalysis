@@ -92,7 +92,7 @@ class LinkedList {
         return size;
     }
 
-    public void reverce() {
+    public void reverse() {
         if (isEmpty()) return;
 
         var prev = first;
@@ -100,7 +100,6 @@ class LinkedList {
 
         while (current != null) {
             var next = current.next;
-
             current.next = prev;
             prev = current;
             current = next;
@@ -125,24 +124,6 @@ class LinkedList {
         while (head != last) {
             head = head.next;
             tail = tail.next;
-        }
-        return tail.value;
-    }
-
-    public int getKthFromEnd2(int k) {
-        if (isEmpty()) throw new IllegalStateException();
-        if (k > size) throw new IllegalArgumentException();
-
-        var head = first;
-        var tail = first;
-        var count = 0;
-
-        while (head != last) {
-            head = head.next;
-            count++;
-            if (count >= k) {
-                tail = tail.next;
-            }
         }
         return tail.value;
     }
