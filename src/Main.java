@@ -120,23 +120,32 @@ public class Main {
 //
 //        System.out.println(queue.toString());
 
-        /* 0011-CharacterFinder */
+        /* 0011-HashTable */
+
+//        HashTable hashTable = new HashTable(5);
+//        hashTable.put(6,"John");
+//        hashTable.put(6,"Jonny");
+//        hashTable.put(8,"Anna");
+//        hashTable.put(11,"Daniel");
+//        System.out.println(hashTable.toString());
+//
+//        hashTable.remove(8);
+//        System.out.println(hashTable.get(11));
+//        System.out.println(hashTable.toString());
+
+        /* 0012-CharacterFinder */
 
 //        CharacterFinder characterFinder = new CharacterFinder("A green apple");
 //        System.out.println(characterFinder.findFirstNonRepeatedChar());
 //        System.out.println(characterFinder.findFirstRepeatedChar());
 
-        /* 0012-HashTable */
+        /* 0013-Tree */
 
-        HashTable hashTable = new HashTable(5);
-        hashTable.put(6,"John");
-        hashTable.put(6,"Jonny");
-        hashTable.put(8,"Anna");
-        hashTable.put(11,"Daniel");
-        System.out.println(hashTable.toString());
-
-        //hashTable.remove(8);
-        System.out.println(hashTable.get(11));
-        System.out.println(hashTable.toString());
+        Tree tree = new Tree();
+        tree.insert(7);
+        tree.insert(5);
+        tree.insert(4);
+        tree.insert(10);
+        System.out.println(tree);
     }
 }

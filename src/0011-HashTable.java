@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.LinkedList;
 
-public class HashTable {
+class HashTable {
     private class Entry {
         private int key;
         private String value;
