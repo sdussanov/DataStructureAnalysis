@@ -1,6 +1,3 @@
-import java.util.ArrayDeque;
-import java.util.Queue;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -123,8 +120,23 @@ public class Main {
 //
 //        System.out.println(queue.toString());
 
-        /* 0011-PriorityQueue */
+        /* 0011-CharacterFinder */
 
+//        CharacterFinder characterFinder = new CharacterFinder("A green apple");
+//        System.out.println(characterFinder.findFirstNonRepeatedChar());
+//        System.out.println(characterFinder.findFirstRepeatedChar());
 
+        /* 0012-HashTable */
+
+        HashTable hashTable = new HashTable(5);
+        hashTable.put(6,"John");
+        hashTable.put(6,"Jonny");
+        hashTable.put(8,"Anna");
+        hashTable.put(11,"Daniel");
+        System.out.println(hashTable.toString());
+
+        //hashTable.remove(8);
+        System.out.println(hashTable.get(11));
+        System.out.println(hashTable.toString());
     }
 }
