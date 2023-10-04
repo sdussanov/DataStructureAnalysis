@@ -1,6 +1,4 @@
-import java.util.NoSuchElementException;
-
-public class Tree {
+class Tree {
     private class Node {
         int value;
         Node leftChild;
@@ -10,23 +8,9 @@ public class Tree {
             this.value = value;
         }
 
-        public int getValue() {
-            return value;
-        }
-
-        public Node getLeftChild() {
-            return leftChild;
-        }
-
-        public Node getRightChild() {
-            return rightChild;
-        }
-
         @Override
         public String toString() {
-            return "Node{" +
-                    "value=" + value +
-                    '}';
+            return "Node=" + value;
         }
     }
 
@@ -55,7 +39,6 @@ public class Tree {
                 }
                 current = current.rightChild;
             }
-
         }
     }
 
@@ -72,13 +55,4 @@ public class Tree {
         }
         return false;
     }
-
-    @Override
-    public String toString() {
-        return "Tree{" +
-                "root=" + root +
-                '}';
-    }
-
-
 }
